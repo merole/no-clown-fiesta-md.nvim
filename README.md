@@ -2,6 +2,8 @@
 
 An attempt at a color scheme that does not look like a clown puked up the source code.
 
+I added support for the most basic features of tree sitter. No idea why they werent in there before...
+
 ![image](https://gustafrydholm.xyz/images/no-clown-fiesta.png)
 
 ## Usage
