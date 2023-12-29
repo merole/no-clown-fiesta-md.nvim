@@ -74,7 +74,34 @@ function M.highlight(palette, opts)
     ["@structure"] = { fg = palette.gray_blue },
     ["@strong"] = { fg = palette.medium_gray },
     ["@query.linter.error"] = { fg = palette.warning },
-    ["@text.strong"] = { bold = true },
+
+            -- Text {{{
+        -- @text                                       ; non-structured text
+        -- @text.strong                                ; bold text
+        ["@text.strong"] = { bold = true },
+        -- @text.emphasis                              ; text with emphasis
+        ["@text.emphasis"] = { italic = true },
+        -- @text.underline (Underlined)                ; underlined text
+        -- @text.strike                                ; strikethrough text
+        -- @text.title (Title)                         ; text that is part of a title
+        ["@text.title"] = { link = "Function" },
+        -- @text.literal (Comment)                     ; literal or verbatim text (e.g., inline code)
+        ["@text.literal"] = { link = "String" },
+        -- @text.quote                                 ; text quotations
+        ["@text.quote"] = { link = "@parameter" },
+        -- @text.uri (Underlined)                      ; URIs (e.g. hyperlinks)
+        -- @text.math                                  ; math environments (e.g. `$ ... $` in LaTeX)
+        ["@text.math"] = { link = "Constant" },
+        -- @text.environment                           ; text environments of markup languages
+        ["@text.environment"] = { link = "Keyword" },
+        -- @text.environment.name                      ; text indicating the type of an environment
+        ["@text.environment.name"] = { link = "String" },
+        -- @text.reference (Identifier)                ; text references, footnotes, citations, etc.
+
+        -- @text.todo (Todo)                           ; todo notes
+        -- @text.note                                  ; info notes
+        -- }}}
+        --
   }
 end
 
