@@ -74,6 +74,7 @@ function M.highlight(palette, opts)
     ["@structure"] = { fg = palette.gray_blue },
     ["@strong"] = { fg = palette.medium_gray },
     ["@query.linter.error"] = { fg = palette.warning },
+    ["@text.strong"] = { bold = true },
   }
 end
 
